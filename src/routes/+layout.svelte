@@ -2,7 +2,6 @@
 	import { page } from '$app/stores';
 	import '../app.css';
 	import Navbar from '../components/navbar/navbar.svelte';
-	import { Modals } from 'svelte-modals';
 	import type { PageData } from './$types';
 
 	let { children } = $props();
@@ -20,12 +19,7 @@
 	<div class="flex-auto p-5">
 		{@render children()}
 	</div>
-	<Modals>
-		<!-- shown when any modal is opened -->
-		{#snippet backdrop({ close })}
-			<div class="backdrop" onclick={() => close()}></div>
-		{/snippet}
-	</Modals>
+	<div class="backdrop hidden transition" onclick={() => close()}></div>
 </div>
 
 <style>
@@ -35,6 +29,6 @@
 		bottom: 0;
 		right: 0;
 		left: 0;
-		background: rgba(0, 0, 0, 0.5);
+		background: rgba(0, 0, 0, 0.7);
 	}
 </style>
