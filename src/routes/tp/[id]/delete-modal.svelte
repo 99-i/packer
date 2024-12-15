@@ -6,7 +6,13 @@
 	const { close, name, tpId } = $props();
 </script>
 
-<dialog open class="duration-10 fixed inset-0 flex items-center justify-center bg-slate-800">
+<dialog
+	open
+	class="fixed inset-0 flex items-center justify-center bg-slate-800"
+	transition:fade={{
+		duration: 200
+	}}
+>
 	<div class="flex flex-col space-y-1 p-3">
 		<p class="text-xl font-semibold text-red-500">WARNING</p>
 		<p class="text-gray-100">You are about to delete the texture pack</p>

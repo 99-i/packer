@@ -23,5 +23,5 @@ export const load: PageLoad = ({ params }) => {
 	return {
 		currentTexturePack: texturePack,
 		title: `Edit ${(texturePack as TexturePack).name}`
-	};
+	}
 };

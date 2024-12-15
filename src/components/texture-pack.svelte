@@ -8,7 +8,7 @@
 </script>
 
 <button
-	class="flex cursor-pointer flex-col bg-slate-200 p-2 text-left transition-all hover:bg-slate-500"
+	class="flex cursor-pointer flex-col bg-slate-200 p-2 text-left transition-all duration-500 hover:bg-slate-500"
 	onclick={() => {
 		goto(`/tp/${tp.id}`);
 	}}

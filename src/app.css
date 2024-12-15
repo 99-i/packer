@@ -9,6 +9,9 @@
 	.btn {
 		@apply btn-base bg-violet-500 text-center hover:bg-violet-700 focus:ring-violet-400;
 	}
+	.btn-green {
+		@apply btn-base bg-green-500 text-center hover:bg-green-700 focus:ring-green-400;
+	}
 	.btn-red {
 		@apply btn-base bg-red-600 hover:bg-red-800 focus:ring-red-500;
 	}
