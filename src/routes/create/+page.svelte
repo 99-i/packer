@@ -4,12 +4,14 @@
 	import { texturePackVersions } from '$lib/data';
 	import { createTexturePack } from '$lib/storage';
 	import { v4 } from 'uuid';
+	import { JavaVersion } from '../../types';
 
 	const versions = texturePackVersions;
 
 	let name = $state('');
 	let nameTouched = $state(false);
-	let version: JavaVersion = $state('1.8.9');
+
+	let version: JavaVersion = $state(JavaVersion._1_8_9);
 
 	function submit() {
 		const id = v4();
@@ -21,7 +23,7 @@
 	}
 
 	let nameError = $derived.by(() => {
-		if (name === '' && nameTouched) {
+		if (name.trim().length === 0 && nameTouched) {
 			return 'Name cannot be empty.';
 		} else {
 			return false;
@@ -51,7 +53,7 @@
 
 	<div class="flex flex-col">
 		<p class="text-l font-medium">Version</p>
-		<select class="w-32" id="version">
+		<select class="w-32" id="version" bind:value={version}>
 			{#each versions as v}
 				<option value={v}>{v}</option>
 			{/each}

@@ -1,13 +1,14 @@
 <script lang="ts">
 	import { goto } from '$app/navigation';
+	import type { TexturePack } from '../types';
 
 	let props = $props();
 
 	const tp: TexturePack = props.tp;
 </script>
 
-<div
-	class="flex cursor-pointer flex-col bg-slate-200 p-2 transition-all hover:bg-slate-500"
+<button
+	class="flex cursor-pointer flex-col bg-slate-200 p-2 text-left transition-all hover:bg-slate-500"
 	onclick={() => {
 		goto(`/tp/${tp.id}`);
 	}}
@@ -29,4 +30,4 @@
 			</div>
 		</div>
 	</div>
-</div>
+</button>

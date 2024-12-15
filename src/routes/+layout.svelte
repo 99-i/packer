@@ -1,10 +1,16 @@
 <script lang="ts">
+	import { page } from '$app/stores';
 	import '../app.css';
 	import Navbar from '../components/navbar/navbar.svelte';
 	import { Modals } from 'svelte-modals';
+	import type { PageData } from './$types';
 
 	let { children } = $props();
 </script>
+
+<svelte:head>
+	<title>{$page.data.title}</title>
+</svelte:head>
 
 <div class="flex flex-col">
 	<div class="flex-none">

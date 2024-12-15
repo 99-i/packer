@@ -1,6 +1,7 @@
 import {getTexturePacks} from '$lib/storage';
 import {error} from '@sveltejs/kit';
 import type {PageLoad} from './$types';
+import type {TexturePack} from '../../../types';
 
 
 export const load: PageLoad = ({params}) => {
@@ -8,7 +9,7 @@ export const load: PageLoad = ({params}) => {
 
 	const texturePacks = getTexturePacks()
 
-	let texturePack
+	let texturePack: TexturePack | undefined
 
 	for (let i = 0; i < texturePacks.length; i++) {
 		if (texturePacks[i].id === id) {
@@ -21,6 +22,7 @@ export const load: PageLoad = ({params}) => {
 	}
 
 	return {
-		currentTexturePack: texturePack
+		currentTexturePack: texturePack,
+		title: (texturePack as TexturePack).name
 	};
 };
