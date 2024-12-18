@@ -1,12 +1,11 @@
 <script lang="ts">
 	import { browser } from '$app/environment';
 	import { goto } from '$app/navigation';
-	import { texturePackVersions } from '$lib/data';
 	import { createTexturePack } from '$lib/storage';
 	import { v4 } from 'uuid';
 	import { JavaVersion } from '../../types';
 
-	const versions = texturePackVersions;
+	const versions = Object.values(JavaVersion);
 
 	let name = $state('');
 	let nameTouched = $state(false);

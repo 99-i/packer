@@ -18,7 +18,6 @@ export default ts.config(
 			}
 		}
 	},
-	{ 'svelte/valid-compile': ['error', { ignoreWarnings: true }] },
 	{
 		files: ['**/*.svelte'],
 

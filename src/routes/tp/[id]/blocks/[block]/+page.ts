@@ -1,8 +1,7 @@
 import { getTexturePacks } from '$lib/storage';
 import { error } from '@sveltejs/kit';
 import type { PageLoad } from './$types';
-import type { TexturePack, TexturePackDatas } from '../../../../types';
-import jsonminify from 'jsonminify';
+import type { TexturePack, TexturePackDatas } from '../../../../../types';
 
 export const load: PageLoad = async ({ fetch, params }) => {
 	const id = params.id;
@@ -30,6 +29,6 @@ export const load: PageLoad = async ({ fetch, params }) => {
 	return {
 		texturePackData,
 		currentTexturePack: texturePack,
-		title: 'Blocks'
+		title: params.block
 	};
 };

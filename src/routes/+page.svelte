@@ -1,7 +1,6 @@
 <script>
 	import { getTexturePacks } from '$lib/storage';
 	import TexturePack from '../components/texture-pack.svelte';
-	import { JavaVersion } from '../types';
 
 	const texturePacks = getTexturePacks();
 </script>

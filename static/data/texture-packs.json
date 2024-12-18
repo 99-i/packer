@@ -1,0 +1,25 @@
+{
+	"1.7.10": {
+		"blocks": []
+	},
+	"1.8.9": {
+		"blocks": [
+			{
+				"name": "beacon",
+				"prettyName": "Beacon"
+			},
+			{
+				"name": "bedrock",
+				"prettyName": "Bedrock"
+			},
+			{
+				"name": "bookshelf",
+				"prettyName": "Bookshelf"
+			},
+			{
+				"name": "brick",
+				"prettyName": "Bricks"
+			}
+		]
+	}
+}
